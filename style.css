@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10vw;
+}
+
+@keyframes myAnimation {
+  0% {
+    background-color: orange;
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    background-color: green;
+    top: 7.8em;
+    left: 0;
+    transform: rotateZ(90deg);
+  }
+
+  50% {
+    background-color: skyblue;
+    top: 7.8em;
+    left: 7.0em;
+    transform: rotateZ(180deg);
+  }
+
+  75% {
+    background-color: yellow;
+    top: 0;
+    left: 7.0em;
+    transform: rotateZ(270deg);
+  }
+
+  100% {
+    background-color: orange;
+    top: 0;
+    left: 0;
+    transform: rotateZ(360deg);
+  }
+}
+
+#main {
+  width: 10em;
+  height: 19em;
+}
+
+#sub {
+  height: 10em;
+  width: 9.2em;
+  border: 0.2em double black;
+  margin: 0.2em;
+  position: relative;
+}
+
+#container {
+  border-radius: 50%;
+  height: 2.0em;
+  width: 2.0em;
+  background-color: orange;
+  margin: 0.1em;
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition-timing-function: linear;
+}
